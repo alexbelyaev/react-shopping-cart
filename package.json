@@ -2,7 +2,7 @@
   "name": "react-shopping-cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/alexbelyaev/react-shopping-cart",
+  "homepage": "https://alexbelyaev.github.io/react-shopping-cart/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
