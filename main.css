@@ -1,0 +1,259 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.relative {
+	position: relative;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.app {
+	padding: 0 15px;
+}
+
+.top-bar {
+	border-bottom: black solid 1px;
+	padding: 7px 0;
+}
+
+.title {
+	margin: 0;
+	padding: 0;
+	font-size: 25px;
+	vertical-align: middle;
+}
+
+button.menu, button.menu:focus {
+	padding: 5px 20px;
+	background: white;
+	border: black solid 1px;
+	outline: none;
+	margin-left: 2px;
+}
+
+button.menu.right {
+	width: 110px;
+}
+
+
+button.menu:hover {
+	background: lightblue;
+	border: black solid 1px;
+}
+
+.fav-menu {
+	position: absolute;
+	border: black solid 1px;
+	background: white;
+	bottom: -301px;
+	right: -1px;
+	width: 500px;
+	height: 300px;
+	overflow: auto;
+}
+
+div.fav-menu {
+	z-index: 1;
+}
+
+.item {
+	width: 180px;
+	height: 240px;
+	margin: 10px auto;
+	border: black solid 1px;
+	margin-right: 5px;
+}
+
+.item-img {
+	height: 180px;
+	font-size: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.item-label {
+	height: 58px;
+	background: white;
+	border-top: black solid 1px;
+	text-align: center;
+}
+
+.item-caption {
+	padding: 3px;
+}
+
+button.menu:active {
+	background: grey;
+}
+
+button.menu.btn-active {
+	background: grey;
+	color: white;
+}
+
+.sel-items {
+	padding: 5px;
+	width: 99px;
+	color: black;
+}
+
+.sel-item-img {
+	border: solid 1px black;
+	text-align: center;
+	padding: 6px;
+}
+
+.sel-item-title {
+	font-size: 30px;
+}
+
+.rem-button {
+	border: solid 1px black;
+	border-radius: 10px;
+	color: white;
+	background: black;
+	margin: 2px;
+}
+
+.rem-button:hover {
+	background: grey;
+}
+
+.flex-col {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.fav-menu-items {flex: 8; overflow: auto;}
+
+.fav-menu-total {flex: 2;}
+
+.flex-total {
+	padding: 5px 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	color: black;
+	justify-content: space-between;
+}
+
+button.menu.order-btn {
+	text-transform: uppercase;
+}
+
+.order-form {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	color: black;
+	border: solid 1px black;
+	width: 100%;
+	height: 100%;
+	
+}
+
+.order-form-flex {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.order-form-content {
+	border: 1px black solid;
+	background-color: white;
+	padding: 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.order-form-content input {
+	outline: 1px solid black;
+	padding: 5px;
+	width: 500px;
+}
+
+.order-form-content div > input {
+	width: 100%;
+}
+
+.order-form-buttons {
+	display: flex;
+	padding: 20px 0;
+	justify-content: flex-end;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-half {
+	flex: 0.5;
+}
+
+div.email {
+	padding-left: 5px;
+}
+
+div.phone {
+	padding-right: 5px;
+}
+
+.message-text {
+	font-size: 24px;
+}
+
+/*
+a.menu, a.menu:visited, a.menu:hover, a.menu:active, a.menu:focus {
+	padding: 5px 20px;
+	background: white;
+	border: black solid 1px;
+	outline: none;
+	margin-left: 2px;
+	color: black;
+	text-decoration: none;
+}
+
+a.menu:hover {
+	background: lightblue;
+}
+*/
+
+div.menu, div.menu:hover {
+	padding: 5px 20px;
+	background: white;
+	border: black solid 1px;
+	outline: none;
+	margin-left: 2px;
+	color: black;
+	text-decoration: none;
+}
+
+div.menu:hover {
+	background: lightblue;
+}

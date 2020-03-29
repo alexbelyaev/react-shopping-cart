@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/alexbelyaev/react-shopping-cart/static/js/main.e06f33b9.chunk.js",
+    "main.js.map": "/alexbelyaev/react-shopping-cart/static/js/main.e06f33b9.chunk.js.map",
+    "runtime-main.js": "/alexbelyaev/react-shopping-cart/static/js/runtime-main.6e471572.js",
+    "runtime-main.js.map": "/alexbelyaev/react-shopping-cart/static/js/runtime-main.6e471572.js.map",
+    "static/js/2.3c1f3838.chunk.js": "/alexbelyaev/react-shopping-cart/static/js/2.3c1f3838.chunk.js",
+    "static/js/2.3c1f3838.chunk.js.map": "/alexbelyaev/react-shopping-cart/static/js/2.3c1f3838.chunk.js.map",
+    "index.html": "/alexbelyaev/react-shopping-cart/index.html",
+    "precache-manifest.b595087ce6c688d9cec6c6b8cfb777c2.js": "/alexbelyaev/react-shopping-cart/precache-manifest.b595087ce6c688d9cec6c6b8cfb777c2.js",
+    "service-worker.js": "/alexbelyaev/react-shopping-cart/service-worker.js",
+    "static/js/2.3c1f3838.chunk.js.LICENSE.txt": "/alexbelyaev/react-shopping-cart/static/js/2.3c1f3838.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6e471572.js",
+    "static/js/2.3c1f3838.chunk.js",
+    "static/js/main.e06f33b9.chunk.js"
+  ]
+}
