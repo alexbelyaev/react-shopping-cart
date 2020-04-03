@@ -12,11 +12,11 @@ class FavoritesMenu extends Component {
 						this.props.list.map(item=>{
 						return(
 							<div key={item.id} className="sel-items left">
-								<div className="sel-item-img">
+								<div className="sel-item-img" style={{background: item.color}}>
 									<div className="sel-item-title">
 										{item.name}
 									</div>
-									{item.price}$
+									<div className="item-price-label">{item.price}$</div>
 									<div className="rem-button"
 										onClick={(e)=>{e.stopPropagation();this.props.removeAction(item)}}>
 										Remove
@@ -32,7 +32,7 @@ class FavoritesMenu extends Component {
 						)
 					});
 
-		const cart = 	<div className="fav-menu clearfix shadow" onClick={e=>{e.stopPropagation();e.preventDefault()}}>
+		const cart = 	<div className="fav-menu clearfix shadow">
 							<div className="flex-col">
 								<div className="fav-menu-items">
 									{items}

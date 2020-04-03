@@ -3,21 +3,28 @@ import React, {Component} from 'react';
 class Item extends Component {
 
 	render(){
+
+	const item = this.props.item;	
 		
 		return(
 				<div className="item">
-					<div className="item-img">{this.props.name}</div>
+					<div className="item-img">
+						<div className="item-color" style={{background: item.color}}>
+							{item.name}
+						</div>
+					</div>
 					<div className="item-label">
 						<div className="item-caption">
-							Item {this.props.name} Price: {this.props.price}$
+							Item {item.name} Price: {item.price}$
 						</div>
 						<button className="menu add-to-cart"
 								onClick={()=>{
 								this.props.actionCart(
 									{	
-										id: this.props.id,
-										name: this.props.name,
-										price: this.props.price
+										id: item.id,
+										name: item.name,
+										price: item.price,
+										color: item.color
 									})	
 								}}
 
@@ -30,9 +37,10 @@ class Item extends Component {
 							onClick={()=>{
 								this.props.actionFav(
 									{	
-										id: this.props.id,
-										name: this.props.name,
-										price: this.props.price
+										id: item.id,
+										name: item.name,
+										price: item.price,
+										color: item.color
 									})}}
 						>{'\u2665'}</button>
 					</div>

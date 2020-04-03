@@ -13,6 +13,7 @@ class App extends Component {
       for(let i=1;i<=100;i++){
         this.items.push({
           name: i,
+          color: this.getRandomColor(),
           price: Math.ceil(Math.random()*100),
           id: Math.random()*Math.pow(10,17),
           categoryId: Math.ceil(Math.random()*15)
@@ -29,6 +30,15 @@ class App extends Component {
 
   handleToggle = (id)=>{
     this.setState({openMenuId: id?id:''})
+  }
+
+  getRandomColor = ()=>{
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   }
 
   handleCatClick = (id) => {
@@ -64,17 +74,14 @@ class App extends Component {
   }
 
   handleMessageClick = (e)=>{
-    //e.stopPropagation();
     this.setState({openMenuId: ''});
   }
 
   handleFormOrderClick = (e)=>{
-    //e.stopPropagation();
     this.setState({openMenuId: 'MessageBox', cart: []});
   }
 
   handleFormCancelClick = (e)=>{
-    //e.stopPropagation();
     this.setState({openMenuId: ''});
   } 
 
@@ -138,9 +145,7 @@ class App extends Component {
       <div className="content">
         {this.state.displayItems.map(item=>{return (
             <Item key={item.id}
-                  id={item.id}
-                  name={item.name}
-                  price={item.price} 
+                  item={item}
                   actionCart={this.handleAddToCartClick} 
                   actionFav={this.handleFavClick} 
                   isFavorite={!!this.state.favorites
