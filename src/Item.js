@@ -5,13 +5,13 @@ class Item extends Component {
 	render(){
 		
 		return(
-				<div className="item left">
+				<div className="item">
 					<div className="item-img">{this.props.name}</div>
 					<div className="item-label">
 						<div className="item-caption">
 							Item {this.props.name} Price: {this.props.price}$
 						</div>
-						<button className="menu"
+						<button className="menu add-to-cart"
 								onClick={()=>{
 								this.props.actionCart(
 									{	

@@ -6,7 +6,7 @@ class MessageBox extends Component {
 		return(
 			<div className="order-form" onClick={e=>{e.stopPropagation();}}>
 				<div className="order-form-flex">
-					<div className="order-form-content">
+					<div className="order-form-content shadow">
 						<p className="message-text">{this.props.text}</p>
 						<div className="order-form-buttons">
 						<button className="menu" onClick={this.props.handleClick}>ok</button>

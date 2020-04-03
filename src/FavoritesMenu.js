@@ -32,7 +32,7 @@ class FavoritesMenu extends Component {
 						)
 					});
 
-		const cart = 	<div className="fav-menu clearfix">
+		const cart = 	<div className="fav-menu clearfix shadow" onClick={e=>{e.stopPropagation();e.preventDefault()}}>
 							<div className="flex-col">
 								<div className="fav-menu-items">
 									{items}
@@ -54,7 +54,7 @@ class FavoritesMenu extends Component {
 				<div>
 				{this.props.type==="cart"
 					?	cart
-					:	<div className="fav-menu clearfix">{items}</div>}
+					:	<div className="fav-menu clearfix shadow">{items}</div>}
 				</div>
 			);
 	}

@@ -10,11 +10,12 @@ class App extends Component {
     super(props)
 
       this.items = [];
-      for(let i=1;i<=50;i++){
+      for(let i=1;i<=100;i++){
         this.items.push({
           name: i,
           price: Math.ceil(Math.random()*100),
-          id: Math.random()*Math.pow(10,17)
+          id: Math.random()*Math.pow(10,17),
+          categoryId: Math.ceil(Math.random()*15)
         });
       }
 
@@ -22,11 +23,20 @@ class App extends Component {
         openMenuId: '',
         favorites: [],
         cart: [],
+        displayItems: JSON.parse(JSON.stringify(this.items))
       }
   }
 
   handleToggle = (id)=>{
     this.setState({openMenuId: id?id:''})
+  }
+
+  handleCatClick = (id) => {
+    this.setState({
+      displayItems: id
+        ? JSON.parse(JSON.stringify(this.items.filter(item=>item.categoryId===id)))
+        : JSON.parse(JSON.stringify(this.items))
+    })
   }
 
   handleFavClick = (item)=>{
@@ -110,8 +120,23 @@ class App extends Component {
               <MessageBox text='Thank you for order!' handleClick={this.handleMessageClick} />}
           </OnClickOutside>
       </div>
+      <div className="flex">
+      <div className="sidebar">
+        <ul className="categories">
+            <li onClick={()=>{this.handleCatClick()}}>All Items</li>
+         {[...new Set(this.items.map(item=>item.categoryId))]
+            .sort((a,b)=>a-b)
+            .map(catId=>{
+          return(
+            <li key={catId} onClick={()=>{this.handleCatClick(catId)}}>
+              {`Category ${catId}`}
+              <span className="count">[{this.items.filter(item=>item.categoryId===catId).length}]</span>
+            </li>)
+          })}
+        </ul>
+      </div>
       <div className="content">
-        {this.items.map(item=>{return (
+        {this.state.displayItems.map(item=>{return (
             <Item key={item.id}
                   id={item.id}
                   name={item.name}
@@ -124,6 +149,7 @@ class App extends Component {
           )}
 
         )}
+      </div>
       </div>
     </div>
   );
